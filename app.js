@@ -7,9 +7,9 @@ import subscriptionRouter from './routes/subscription.routes.js';
 
 const app = express();
 
-app.use('/', authRouter);
-app.use('/', userRouter);
-app.use('/', subscriptionRouter);
+app.use('/api/v1/auth', authRouter);
+app.use('/api/v1/user', userRouter);
+app.use('/api/v1/subscriptions', subscriptionRouter);
 
 app.listen(PORT, () => {
   console.log(`=> App listening on port",${PORT}👊`);
